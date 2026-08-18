@@ -1,0 +1,9 @@
+data types in cpp :
+
+C++ Type   |  Python Equivalent   |  C++ Example            |  What it holds
+int,       |    int               |  int age = 25   ;       |Whole numbers.
+double,    |   float,             |double pi = 3.1415;,     |Decimal numbers (high precision).
+float,     |float,                |float tax = 1.5f ;       |,Decimal numbers (lower precision).
+char,      |str (length 1),       |char grade = 'A';        |,Exactly one single character.
+std::string|str                   |"std::string x = ""Hi"";"|Text (multiple characters).
+bool       |bool                  |bool is_on = true;       |,True or False.

@@ -1,0 +1,53 @@
+when you want to hold multiple types of data u use struct 
+
+in python 
+class Player:
+    def __init__(self):
+        self.name = ""
+        self.age = 1
+        self.is_alive = True
+
+p1 = Player()
+p1.name = "alex"
+
+in cpp 
+
+struct Player {
+    std::string name ;
+    int level  = 1 ;
+    bool is_alive = true ;
+
+}; <-- struct and class must end with semicolon
+
+Player p1;
+p1.name = "alex";
+
+###########
+in cpp classes everything is private by deafult 
+
+class BankAccount
+{
+    Private :
+        double balance;
+    Public :
+        std::string owner;
+        BankAccount(std::string new_owner,double starting_balance)
+        {
+            owner = new_owner;
+            balance = starting_balance;
+        }
+
+        Void deposit(double amount)
+        {
+            balance += amount
+        }
+        double get_balance(){
+            return balance;
+        }
+};
+
+No self: Python forces you to write self. everywhere. C++ assumes that if you use a variable name like balance inside a method, you mean the object's own balance.
+
+public vs private: C++ makes you explicitly design the "doors" to your object. If you don't put it under public:, it is completely invisible to the rest of your program.
+
+The Semicolon of Doom: Always put a ; at the closing brace "}" of a struct or class.

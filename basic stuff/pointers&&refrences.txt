@@ -1,0 +1,27 @@
+in python when you pass a large lsit into a function ...python secretly passes a refrence of the list not the list ..just the location of it in memeroy 
+in cpp it copies the enteir list and passed it 
+the & symbol 
+when you creat a variblle ...cpp creat it and assign a memeroy address to it 
+int score = 100;
+std::cout<<score; it well print the value of the variblle
+std::cout<<&score; it well print the address of the variable in the memeroy
+
+
+you can creat a nickname (alias to varible ):
+int score = 100;
+int& nickname = score;
+nickname = 99;
+std::cout<<score; 99
+by changing the alias you change the orignal 
+
+
+by this rout you can pass a massive thing into fucntion and change it without copying the entier thing and slowing down ...cuz you write directly in the memeroy
+
+
+############
+
+pointers 
+int score = 100;
+int* map = &score;
+std::cout<<*map; go to that address and tell me what's on it 
+*map = 999 ; go to the address and change what's on it 

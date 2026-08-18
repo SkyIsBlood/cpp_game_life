@@ -1,0 +1,50 @@
+in python you just write your code into seperate file tool.py for example,
+and int the main file u just write at the top from tool.py import *
+cpp  doesn't do that instead u use 
+...to split the code of a cpp project u need two files for every module
+the header file (.h or .hpp):it's like a resturnet menu ..it list the functions or classes and don't do anything to em 
+the source file (.cpp):the kitchen the contains the logic 
+
+
+the header file :
+
+#pragma once // CRITICAL: This tells C++ to never import this file twice
+#include <string>
+
+class Robot {
+public:
+    std::string name;
+    
+    // We just write the constructor and function PROTOTYPES here
+    Robot(std::string robot_name);
+    void say_hello();
+};
+
+
+the source file :
+
+#include "robot.h" // Import our own header file using QUOTES, not < >
+#include <iostream>
+
+// We use Robot:: to tell C++ "This is the constructor belonging to Robot"
+Robot::Robot(std::string robot_name) {
+    name = robot_name;
+}
+
+// We use Robot:: to tell C++ "This is the say_hello function belonging to Robot"
+void Robot::say_hello() {
+    std::cout << "Beep boop. I am " << name << std::endl;
+}
+
+
+the main file :
+
+#include <iostream>
+#include "robot.h" // Just include the "menu"
+
+int main() {
+    Robot my_bot("R2-D2");
+    my_bot.say_hello();
+    
+    return 0;
+}

@@ -1,0 +1,58 @@
+in cpp you don't have def keyword instead what you are returning becomes that keyword Equivalent
+
+in python the basic syntaxe is like this :
+
+def myfunc(a,b):
+    return a + b 
+
+
+in cpp it's like this :
+
+int myfunc(int a , int b ){
+    return a + b 
+}
+
+
+in cpp their is a function that dosn't return anything it's called the void function
+
+## include <iostream>
+## include <string>
+
+
+void greeting(std::string name){
+    std::cout<<"Welcome, "<<name<<std::endl;
+}
+
+
+
+cpp read the file from top to bottom so if you to use function the doesn't exist yet,
+the compiler well throu at you an error 
+
+their is two approaches to fix that ...
+Approuch 1 
+define the function first then use it in main down blow 
+
+
+int multiply(int a , int b ){
+    return a * b 
+}
+int main(){
+    st::cout<<multiply(10,20)<<std::endl;
+    return 0;
+}
+
+
+Approuch 2 
+
+use the prototype function
+
+int multiply(int a , int b);
+
+int main(){
+    int result = multiply(10,23);
+    std::cout<<result<<std::endl;
+    return 0;
+}
+int multiply(int a , int b){
+    return a * b ;
+}

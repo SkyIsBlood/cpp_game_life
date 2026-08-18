@@ -1,0 +1,57 @@
+vector is like a python list which can shrink and grow using(.append(in python) which is the same as .push_back())
+## include <iostream>
+## include <vector> 
+## include <string>
+
+int main()
+{
+    std::vector<std::string> inventory = {"sowrd","shield"};
+
+    ##append Equivalent 
+    inventory.push_back("potion");
+    std::cout<< inventory[0]<<endl;
+    return 0;
+
+}
+
+
+
+tuple in cpp is just way to group multiple data types ...like int and strinf whichwe can group using pair ,or int and double and string ,which tuple
+
+## include <iostream> 
+## include <utility> needed for pair and tuple 
+## include <string>
+
+int main()
+{
+    std::pair<int,std::string> player = {1,"Bob"};
+    std::cout<<player.first;
+    std::cout<<player.second;
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+### tuple which is 3 items held together 
+
+
+
+
+
+
+## include <iostream> 
+## include <tuple> needed for pair and tuple 
+## include <string>
+
+int main()
+{
+    std::tuple<int,std::string,bool> player = {1,"Bob",true};
+    std::cout<<std::get<1>(record);
+    return 0;
+}
